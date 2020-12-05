@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  job_title: MyString
+  salary: MyString
+  minimum_japaneseskill: MyString
+  job_description: MyString
+  shift: MyString
+  place: MyString
+
+two:
+  job_title: MyString
+  salary: MyString
+  minimum_japaneseskill: MyString
+  job_description: MyString
+  shift: MyString
+  place: MyString

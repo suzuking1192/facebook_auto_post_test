@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Job title:</strong>
+  <%= @joboffer.job_title %>
+</p>
+
+<p>
+  <strong>Salary:</strong>
+  <%= @joboffer.salary %>
+</p>
+
+<p>
+  <strong>Minimum japaneseskill:</strong>
+  <%= @joboffer.minimum_japaneseskill %>
+</p>
+
+<p>
+  <strong>Job description:</strong>
+  <%= @joboffer.job_description %>
+</p>
+
+<p>
+  <strong>Shift:</strong>
+  <%= @joboffer.shift %>
+</p>
+
+<p>
+  <strong>Place:</strong>
+  <%= @joboffer.place %>
+</p>
+
+<%= link_to 'Edit', edit_joboffer_path(@joboffer) %> |
+<%= link_to 'Back', joboffers_path %>
