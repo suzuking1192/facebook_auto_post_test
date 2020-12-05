@@ -1,34 +1,37 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Job title:</strong>
-  <%= @joboffer.job_title %>
-</p>
+<div class="jumbotron">
+  <h1 class="display-4">
+    <%= @joboffer.job_title %>
+  </h1>
+  <p class="lead">
+    <strong>Salary:</strong>
+    <%= @joboffer.salary %>
+  </p>
 
-<p>
-  <strong>Salary:</strong>
-  <%= @joboffer.salary %>
-</p>
+  <p class="lead">
+    <strong>Minimum japaneseskill:</strong>
+    <%= @joboffer.minimum_japaneseskill %>
+  </p>
 
-<p>
-  <strong>Minimum japaneseskill:</strong>
-  <%= @joboffer.minimum_japaneseskill %>
-</p>
+  <p class="lead">
+    <strong>Job description:</strong>
+    <%= @joboffer.job_description %>
+  </p>
 
-<p>
-  <strong>Job description:</strong>
-  <%= @joboffer.job_description %>
-</p>
+  <p class="lead">
+    <strong>Shift:</strong>
+    <%= @joboffer.shift %>
+  </p>
 
-<p>
-  <strong>Shift:</strong>
-  <%= @joboffer.shift %>
-</p>
+  <p class="lead">
+    <strong>Place:</strong>
+    <%= @joboffer.place %>
+  </p>
+</div>
 
-<p>
-  <strong>Place:</strong>
-  <%= @joboffer.place %>
-</p>
 
-<%= link_to 'Edit', edit_joboffer_path(@joboffer) %> |
-<%= link_to 'Back', joboffers_path %>
+
+
+<%= link_to 'Edit', edit_joboffer_path(@joboffer),class:"btn btn-secondary" %> |
+<%= link_to 'Back', joboffers_path,class:'btn btn-secondary' %>
