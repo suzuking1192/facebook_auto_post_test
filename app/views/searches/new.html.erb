@@ -1,0 +1,24 @@
+<h1>Advanced Search</h1>
+
+<%= form_for @search, html: {class: "pure-form"} do |s| %>
+
+  <div class="field">
+    <%= s.label :keywords %><br/>
+    <%= s.text_field :keywords %>
+  </div>
+
+  <div class="field">
+    <%= s.label :minimum_japanese %><br/>
+    <%= s.select :minimum_japanese, options_for_select(@categories), :include_blank => true %>
+  </div>
+
+  <div class="field">
+    <%= s.label :min_salary, "Min Salary" %> - <%= s.text_field :min_salary,size:10  %>
+    <%= s.label :max_salary, "Max Salary" %> - <%= s.text_field :max_salary,size:10  %>
+  </div>
+
+  <div class="actions"><%= s.submit "Search",class:'btn btn-secondary' %></div>
+
+<% end %>
+<br/>
+<%= link_to 'Back',joboffers_path,class:'btn btn-secondary' %>

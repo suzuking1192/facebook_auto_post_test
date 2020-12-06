@@ -37,7 +37,9 @@
     <%= text_field_tag :search, params[:search] %>
     <%= submit_tag 'search' %>
   <% end %>
-
+<br/>
+<%= link_to 'Advanced Search',new_search_path,class:"btn btn-secondary" %>
+<br/>
 <br>
 <% @joboffers.each do |joboffer| %>
 <div class="card" style="width: 20rem; height:auto">

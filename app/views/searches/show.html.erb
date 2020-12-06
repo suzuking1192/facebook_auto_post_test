@@ -1,0 +1,22 @@
+<h1>Search Result</h1>
+
+<% if @search.search_job.empty?  %>
+
+  <p>No Records Found</p>
+
+<% else %>
+
+  <%= @search.search_job.each do |c| %>
+  <br>
+
+  <div class="div">
+    <h1><%= c.job_title %></h1>
+    <p>Minimum Japanese: <%= c.minimum_japaneseskill %></p>
+    <p>Salary: <%= c.salary %></p>
+    <%= link_to 'Detail', joboffer_path,class:'btn btn-primary' %>
+
+
+  </div>
+  <% end %>
+
+<%  end %>
