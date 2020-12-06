@@ -4,6 +4,12 @@
   <h1 class="display-4">
     <%= @joboffer.job_title %>
   </h1>
+
+
+    <%= image_tag @joboffer.image.variant(resize:'400x400').processed  %>
+
+
+
   <p class="lead">
     <strong>Salary:</strong>
     <%= @joboffer.salary %>
@@ -29,7 +35,6 @@
     <%= @joboffer.place %>
   </p>
 </div>
-
 
 
 

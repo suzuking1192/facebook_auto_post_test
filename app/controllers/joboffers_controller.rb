@@ -4,7 +4,7 @@ class JoboffersController < ApplicationController
   # GET /joboffers
   # GET /joboffers.json
   def index
-    @joboffers = Joboffer.all
+    @joboffers = Joboffer.search(params[:search])
   end
 
   # GET /joboffers/1
@@ -69,6 +69,6 @@ class JoboffersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def joboffer_params
-      params.require(:joboffer).permit(:job_title, :salary, :minimum_japaneseskill, :job_description, :shift, :place)
+      params.require(:joboffer).permit(:job_title, :salary, :minimum_japaneseskill, :job_description, :shift, :place, :image)
     end
 end

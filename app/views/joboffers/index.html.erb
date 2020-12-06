@@ -33,19 +33,28 @@
   </tbody>
 </table>
 
+  <%= form_tag joboffers_path, :method=>'get' do %>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag 'search' %>
+  <% end %>
 
 <br>
 <% @joboffers.each do |joboffer| %>
-<div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
+<div class="card" style="width: 20rem; height:auto">
+  <%= image_tag joboffer.image,style:'width:100%' %>
   <div class="card-body">
     <h5 class="card-title"><%= joboffer.job_title %></h5>
     <p class="card-text"><%= joboffer.job_description %></p>
     <%= link_to 'Detail', joboffer,class:'btn btn-primary' %>
     <%= link_to 'Destroy', joboffer, method: :delete,class:'btn btn-danger', data: { confirm: 'Are you sure?' } %>
+
   </div>
 </div>
+
+
 <% end %>
+
+
 
 <br>
 
